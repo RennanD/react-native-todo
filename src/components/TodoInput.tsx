@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Alert, Image, Platform, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, Platform, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
 
 import checkIcon from '../assets/icons/Check.png';
 
@@ -11,10 +11,6 @@ export function TodoInput({ addTask }: TodoInputProps) {
   const [task, setTask] = useState('');
 
   function handleAddNewTask() {
-    if(!task) {
-      Alert.alert('Erro', 'Você precisa descrever a atividade')
-      return;
-    }
     addTask(task)
     setTask('') 
   }
